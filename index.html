@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type=text/css" href="VideoApp.css">
+
+	
+  </head>
+
+
+	<style type="text/css">
+		
+			
+		body{
+			background-image:url(background2.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		.content{
+			background: white;
+			width: 50%;
+			padding: 40px;
+			margin: 100px auto;
+			font-family: calibri;
+			border-radius: 10px;
+		}
+
+		p{
+			font-size: 25px;
+			color: black;
+		}
+
+	</style>
+
+
+  </head>
+  <body>
+
+	<br>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div class="container">
+		<div class="row">
+		  <div class="col-sm">
+		    <div class="jumbotron" id="jumbo">
+				<div class="container">
+				  <h1 class="display-4">VideoApp</h1>
+				  <p class="lead">Video Chat without signup or any installiation! Simply press the button below to start!</p>
+				  <div style="text-align: center">
+					<button type="button" class="btn btn-dark" id="start">Start</button>
+				  </div>
+				</div>
+			  </div>
+
+				<div style="display: none;" class="jumbotron" id = "intro">
+				  <div class="container">
+					<h1 class="display-4">Setup Call</h1>
+					<p class="lead">Either Host or Join a Call</p>
+					<div style="text-align: center">
+					  <button type="button" class="btn btn-dark" id="host">Host</button>
+					  <button type="button" class="btn btn-dark" id="join">Join</button>
+					</div>
+				  </div>
+				</div>
+
+
+				
+				<div style="display: none;" class="jumbotron" id = "hostdiv">
+					<div class="container">
+					  <h1 class="display-4">Host Call</h1>
+					  <p class=" lead" id="idgen">Click to generate Host ID</p>
+					  <video width="320" height="240" controls>
+					  </video>
+					  <div style="text-align: center">
+						<button type="button" class="btn btn-dark" id="opencall">Generate</button>
+						<button type="button" class="btn btn-outline-danger" id="leave">Leave Call</button>
+					  </div>
+					</div>
+				  </div>
+  
+
+				  
+				<div style="display: none;" class="jumbotron" id = "joindiv">
+					<div class="container">
+					  <h1 class="display-4">Join Call</h1>
+					  <p class="lead">Enter Partner ID:</p>
+					  <div class="form-group row">
+					 	<div class="col-xs-2">
+					  		<input type="text" class="form-control" id="partnerid">
+					  	</div>
+					</div>
+					<video width="320" height="240" controls>
+					</video>
+					  <div style="text-align: center">
+						<button type="button" class="btn btn-dark" id="joincall">Join</button>
+						<button type="button" class="btn btn-dark" id="join">Back</button>
+					  </div>
+					</div>
+				  </div>
+  
+
+
+		  </div>
+
+	  </div>
+		  <div class="col-sm">
+		  </div>
+		</div>
+	  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/peerjs@1.0.0/dist/peerjs.min.js"></script>
+	<script src="index.js" charset="utf-8"></script>
+
+
+
+</body>
+</html>
