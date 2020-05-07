@@ -11,15 +11,18 @@ var getUserMedia = (function (){
 })();
 
 function onRecieveStream(stream){
-	var video = document.querySelector('video');
-	console.log(audio);
-	video.srcObject = stream;
-	video.onloadedmetadata = function(e){
-		console.log('Now playing the audio');
-		video.play();
+	var video = document.createElement('video');
+    document.body.appendChild(video);
+    video.srcObject = stream;
+    video.play();
 	}
-}
-
+	// var video = document.querySelector('video');
+	// console.log(video);
+	// video.srcObject = stream;
+	// video.onloadedmetadata = function(e){
+	// 	console.log('Now playing the video');
+	// 	video.play();
+	// }
 
 $(document).ready(function(){
 	$("#start").click(function(){
@@ -73,7 +76,5 @@ $(document).ready(function(){
         });
     });
 });
-
-
 
 
