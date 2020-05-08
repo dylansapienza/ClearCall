@@ -11,10 +11,15 @@ var getUserMedia = (function (){
 })();
 
 function onRecieveStream(stream){
-	var video = document.createElement('video');
-    document.body.appendChild(video);
-    video.srcObject = stream;
-    video.play();
+	if(document.querySelector('video')){
+		console.log("User Already In Call!");
+	}
+	else{
+		var video = document.createElement('video');
+		document.body.appendChild(video);
+		video.srcObject = stream;
+		video.play();
+		}
 	}
 	// var video = document.querySelector('video');
 	// console.log(video);
