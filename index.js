@@ -22,14 +22,6 @@ function onRecieveStream(stream){
 		video.play();
 		}
 	}
-	// var video = document.querySelector('video');
-	// console.log(video);
-	// video.srcObject = stream;
-	// video.onloadedmetadata = function(e){
-	// 	console.log('Now playing the video');
-	// 	video.play();
-	// }
-
 
 $(document).ready(function(){
 	$("#start").click(function(){
