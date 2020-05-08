@@ -1,2 +1,7 @@
-# ClearCall
-A P2P Video Calling Service
+## Clear Call
+
+**Clear Call is a peer-to-peer video chat service
+Using WebRTC users can stream video without the need of any server or intermediary**
+Tested on Chromium based browsers on windows, macOS and android
+
+![Homepage](https://github.com/dylansapienza/ClearCall/blob/master/screenshots/homepage.jpg?raw=true)
