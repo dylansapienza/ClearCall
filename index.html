@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" type=text/css" href="VideoApp.css">
+	<link rel="stylesheet" type="text/css" href="VideoApp.css">
 
 	
   </head>
@@ -46,15 +46,13 @@
 	<br>
 	<br>
 	<br>
-	<br>
-	<br>
 
 	<div class="container">
 		<div class="row">
 		  <div class="col-sm">
 		    <div class="jumbotron" id="jumbo">
 				<div class="container">
-				  <h1 class="display-4">VideoApp</h1>
+				  <h1 class="display-4">Clear Call</h1>
 				  <p class="lead">Video Chat without signup or any installiation! Simply press the button below to start!</p>
 				  <div style="text-align: center">
 					<button type="button" class="btn btn-dark" id="start">Start</button>
@@ -81,7 +79,7 @@
 					  <p class=" lead" id="idgen">Click to generate Host ID</p>
 					  <div style="text-align: center">
 						<button type="button" class="btn btn-dark" id="opencall">Generate</button>
-						<button type="button" class="btn btn-outline-danger" id="leave">Leave Call</button>
+						<button type="button" class="btn btn-dark" id="refresh">Back</button>
 					  </div>
 					</div>
 				  </div>
@@ -99,7 +97,7 @@
 					</div>
 					  <div style="text-align: center">
 						<button type="button" class="btn btn-dark" id="joincall">Join</button>
-						<button type="button" class="btn btn-dark" id="join">Back</button>
+						<button type="button" class="btn btn-dark" id="refresh2">Back</button>
 					  </div>
 					</div>
 				  </div>
@@ -117,7 +115,7 @@
 				  <div style="display: none;" class="jumbotron" id = "hungup">
 					<div class="container">
 					  <h1 class="display-4">Call Ended</h1>
-					  <p class="lead">Thanks for using VideoApp! Please Close This Window.</p>
+					  <p class="lead">Thanks for using Clear Call! Please Close This Window.</p>
 					</div>
 				  </div>
   
@@ -140,7 +138,7 @@
 	<script src="https://unpkg.com/peerjs@1.0.0/dist/peerjs.min.js"></script>
 	<script src="index.js" charset="utf-8"></script>
 
-
+	<div class="navbar fixed-bottom" id="attribution">Dylan Sapienza 2020</div>
 
 </body>
 </html>

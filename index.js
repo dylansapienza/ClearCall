@@ -30,6 +30,7 @@ function onRecieveStream(stream){
 	// 	video.play();
 	// }
 
+
 $(document).ready(function(){
 	$("#start").click(function(){
 		$("#jumbo").remove();
@@ -43,7 +44,7 @@ $(document).ready(function(){
     });
     
     $("#opencall").click(function(){
-        var peer = new Peer();
+        window.peer = new Peer();
         peer.on('open', (id) =>{
             $('#idgen').text("ID: " + id);
 		});
@@ -74,7 +75,7 @@ $(document).ready(function(){
         var person_to_call = document.getElementById("partnerid").value;
 				console.log('Calling ' + person_to_call);
                 
-            var peer = new Peer();
+            window.peer = new Peer();
             getUserMedia({video: true, audio: true}, function(stream){
                 var call = peer.call(person_to_call, stream);
                 call.on('stream', function(remoteStream){
@@ -91,10 +92,13 @@ $(document).ready(function(){
 	$("#hangup").click(function(){
 		$("#videocall").remove();
 		//Make Peer Global To Disconnect Anywhere in function
-		peer.disconnect();
-		$("#hungup").show();
+		peer.destroy();
+		window.location.reload();
 	});
 
+	$("#refresh,#refresh2").click(function(){
+		window.location.reload();
+	});
 
 });
 

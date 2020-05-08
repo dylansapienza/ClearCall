@@ -1,7 +1,11 @@
+#attribution{
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+}
+
 #startbutton {
     display: flex;
     justify-content: center;
 }
-#viewvid {
-    text-align: center;
- }
+
