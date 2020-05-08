@@ -16,7 +16,8 @@ function onRecieveStream(stream){
 	}
 	else{
 		var video = document.createElement('video');
-		document.body.appendChild(video);
+		var vidElement = document.getElementById('viewvid');
+		vidElement.appendChild(video);
 		video.srcObject = stream;
 		video.play();
 		}
@@ -49,6 +50,8 @@ $(document).ready(function(){
 		peer.on('call', function(call){
 			getUserMedia({video: true, audio: true}, function(stream){
 				console.log('Call incoming!');
+				$("#hostdiv").remove();
+				$("#videocall").show();
 				call.answer(stream);
 				call.on('stream', function(remoteStream){
 					console.log(remoteStream);
@@ -66,6 +69,8 @@ $(document).ready(function(){
 	});
 
 	$("#joincall").click(function(){
+		
+		
         var person_to_call = document.getElementById("partnerid").value;
 				console.log('Calling ' + person_to_call);
                 
@@ -73,13 +78,24 @@ $(document).ready(function(){
             getUserMedia({video: true, audio: true}, function(stream){
                 var call = peer.call(person_to_call, stream);
                 call.on('stream', function(remoteStream){
-                    console.log(remoteStream);
+					console.log(remoteStream);
+					$("#joindiv").remove();
+					$("#videocall").show();
                     onRecieveStream(remoteStream);
                 });
             }, function(err){
 				console.log('Failed to get local stream', err);
         });
-    });
+	});
+	
+	$("#hangup").click(function(){
+		$("#videocall").remove();
+		//Make Peer Global To Disconnect Anywhere in function
+		peer.disconnect();
+		$("#hungup").show();
+	});
+
+
 });
 
 
